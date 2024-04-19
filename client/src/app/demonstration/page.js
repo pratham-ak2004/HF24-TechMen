@@ -41,7 +41,7 @@ export default function Page() {
       return;
     }
     try {
-      await fetch(`http://172.16.16.218:5000/demo`, {
+      await fetch(`http://127.0.0.1:5000/demo`, {
         headers: {
           "Content-Type": "application/json",
         },
@@ -137,12 +137,12 @@ export default function Page() {
               parseInt(rate) < 30 ? "text-red-500" : ""
             }`}
           >
-            {parseInt(rate) > 30
+            {/* {parseInt(rate) > 30
               ? `Normal Respiratory Rate: ${rate}`
-              : `Low Respiratory Rate: ${rate}`}
+              : `Low Respiratory Rate: ${rate}`} */}
           </p>
           <div className="w-full flex flex-row justify-center mb-5">
-            {parseInt(rate) < 30 ? (
+            {/* {parseInt(rate) < 30 ? (
               <p className="text-center bg-destructive p-2 rounded-md text-md">
                 You might want to consult a doctor
               </p>
@@ -152,7 +152,7 @@ export default function Page() {
                   Your respiratory rate is normal
                 </p>
               </>
-            )}
+            )} */}
           </div>
         </>
       ) : (

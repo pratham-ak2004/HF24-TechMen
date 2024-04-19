@@ -16,12 +16,12 @@ export default function Page() {
       <Navbar />
       <div className="md:w-[600px] m-auto mt-20 mb-16 sm:w-[400px] max-sm:w-[300px]">
         <Carousel
-          plugins={[
-            Autoplay({
-              delay: 5000,
-              pauseOnHover: true,
-            }),
-          ]}
+          // plugins={[
+          //   Autoplay({
+          //     delay: 5000,
+          //     pauseOnHover: true,
+          //   }),
+          // ]}
         >
           <CarouselContent className="md:text-xl">
             <CarouselItem className="p-10 m-auto">
@@ -61,7 +61,7 @@ export default function Page() {
                 </li>
                 <li>
                   Early identification of conditions like sleep apnea through
-                  abnormal sleep patterns
+                  abnormal respiratory rate
                 </li>
                 <li>
                   Support for longitudinal studies by enabling continuous and
@@ -111,13 +111,13 @@ export default function Page() {
               </p>
             </CarouselItem>
             <CarouselItem className="p-10 m-auto">
-              <p className="doc-heading">
+              {/* <p className="doc-heading">
                 License
               </p>
               <p className="mb-5">
                 This project is licensed under the MIT License - see the LICENSE
                 file for details.
-              </p>
+              </p> */}
 
               <p className="doc-heading">
                 Acknowledgments
@@ -138,7 +138,10 @@ export default function Page() {
           <CarouselNext />
         </Carousel>
       </div>
+      <div className="absolute w-full bottom-0">
+
       <Footer />
+      </div>
     </div>
   );
 }

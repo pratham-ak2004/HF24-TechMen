@@ -54,12 +54,6 @@ def get_respirator_rate_from_image(img_path , delete=True):
         os.remove(img_path)
     return respiratory_rate.decode('utf-8')
 
-
-## App routes
-@app.route('/')
-def main_page():
-    return 'This is a Python Flask API for License Plate Detector'
-
 ## App routes
 @app.route('/demo',methods=['POST'])
 def new_route():
@@ -75,6 +69,12 @@ def new_route():
     data = convert_video_to_data_url("output.mp4")
     
     return jsonify({"video" : data , "graph" : img , "respiratoryRate" : respiratory_rate}) , 200
+
+
+## App routes
+@app.route('/')
+def main_page():
+    return 'This is a Python Flask API for License Plate Detector'
 
 @app.route('/test',methods=['POST'])
 def temp_func():
